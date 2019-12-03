@@ -1,28 +1,17 @@
-import heroHealthLevel from '../app';
+import heroRange from '../app';
 
-test('healthy', () => {
-    const hero = {
-      name: 'Маг',
-      health: 52,
-    };
-  
-    expect(heroHealthLevel(hero)).toBe('healthy');
-  });
+test('sort', () => {
+  const input = [
+    { name: 'мечник', health: 10 },
+    { name: 'маг', health: 100 },
+    { name: 'лучник', health: 80 },
+  ];
 
-  test('wounded', () => {
-    const hero = {
-      name: 'Маг',
-      health: 48,
-    };
-  
-    expect(heroHealthLevel(hero)).toBe('wounded');
-  });
+  const expected = [
+    { name: 'маг', health: 100 },
+    { name: 'лучник', health: 80 },
+    { name: 'мечник', health: 10 },
+  ];
 
-  test('critical', () => {
-    const hero = {
-      name: 'Маг',
-      health: 5,
-    };
-  
-    expect(heroHealthLevel(hero)).toBe('critical');
-  });
+  expect(heroRange(input)).toEqual(expected);
+});

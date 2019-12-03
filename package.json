@@ -1,12 +1,18 @@
 {
-  "name": "ajs7-unit-test",
+  "name": "ajs7-unit-test2",
   "version": "1.0.0",
   "description": "unit-test2",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "preshow:coverage": "npm run coverage",
+    "show:coverage": "live-server coverage/lcov-report",
+    "preshow:dist": "npm run build",
+    "show:dist": "live-server dist"
   },
   "repository": {
     "type": "git",
@@ -29,6 +35,7 @@
     "@typescript-eslint/parser": "^2.10.0",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.1",
     "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
@@ -36,7 +43,8 @@
     "jest": "^24.9.0",
     "mini-css-extract-plugin": "^0.8.0",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
     "core-js": "^3.4.5"

@@ -47,6 +47,7 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "core-js": "^3.4.5"
+    "core-js": "^3.4.5",
+    "text-loader": "0.0.1"
   }
 }
